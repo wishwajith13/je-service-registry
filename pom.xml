@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jeewaeducation</groupId>
-	<artifactId>service-registry</artifactId>
+	<artifactId>eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>service-registry</name>
 	<description>Demo project for Spring Boot</description>
@@ -69,6 +69,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.2</version>
+				<configuration>
+					<to>
+						<image>krishanachintha/${project.artifactId}:V1</image>
+					</to>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
